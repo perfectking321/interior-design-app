@@ -40,4 +40,9 @@ public class FurnitureDAO {
         List<Furniture> list = jdbcTemplate.query(sql, furnitureRowMapper, category);
         return list.isEmpty() ? null : list.get(0);
     }
+
+    public List<Furniture> getAllFurniture() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAllFurniture'");
+    }
 }

@@ -97,7 +97,6 @@ public class RuleEngine {
 
         // Place TV stand on opposite wall from sofa
         if (tv != null && !placed.isEmpty()) {
-            FurniturePosition sofaPos = placed.get(0);
             double x, y;
             if (longestIsHorizontal) {
                 // sofa top => tv on bottom wall
@@ -135,7 +134,8 @@ public class RuleEngine {
         // Optionally place side table next to sofa if budget allows
         if (sidetable != null && !placed.isEmpty()) {
             FurniturePosition sofaPos = placed.get(0);
-            double x = sofaPos.getX() + sofaPos.getWidth() + 0.1; // to the right
+            // Place side table to the right of sofa
+            double x = sofaPos.getX() + sofaPos.getWidth() + 0.1;
             double y = sofaPos.getY();
             FurniturePosition sidePos = new FurniturePosition(sidetable, x, y);
             if (fitsInRoom(sidePos, roomW, roomH) && !overlapsAny(sidePos, placed)) {

@@ -58,4 +58,9 @@ public class RoomLayout {
     public void setPlaced(List<FurniturePosition> placed) {
         this.placed = placed;
     }
+
+    public Object getFurniturePositions() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFurniturePositions'");
+    }
 }
