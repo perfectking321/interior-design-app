@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Error</title>
+    <link th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" rel="stylesheet"/>
+    <style>
+        body { background: #f8d7da; }
+        .error-box { background: #fff; padding: 20px; border-radius: 8px; margin-top: 50px; }
+        pre { max-height: 400px; overflow-y: auto; background: #f1f1f1; padding: 10px; border-radius: 6px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="error-box shadow-sm">
+        <h2 class="text-danger">An error occurred</h2>
+            <p><strong>Status:</strong> <span th:text="${status}"></span></p>
+            <p><strong>Message:</strong> <span th:text="${message}"></span></p>
+
+            <h5>Stack trace:</h5>
+            <pre th:text="${stackTrace}"></pre>
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+</div>
+</body>
+</html>

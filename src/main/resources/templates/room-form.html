@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Room Planner - Input</title>
+    <link th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <style>
+        /* Minimal inline to ensure the form looks good even if webjars aren't present */
+    </style>
+</head>
+<body>
+<div class="container py-5">
+    <h1 class="mb-4">Simplified Interior Design — Room Input</h1>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <form th:action="@{/layout}" th:object="${room}" method="post" novalidate>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="length" class="form-label">Length (m)</label>
+                        <input type="number" step="0.1" min="3" max="15" th:field="*{length}" class="form-control" id="length"/>
+                        <div class="text-danger small" th:if="${#fields.hasErrors('length')}" th:errors="*{length}"></div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="width" class="form-label">Width (m)</label>
+                        <input type="number" step="0.1" min="3" max="15" th:field="*{width}" class="form-control" id="width"/>
+                        <div class="text-danger small" th:if="${#fields.hasErrors('width')}" th:errors="*{width}"></div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="budget" class="form-label">Budget (USD)</label>
+                        <input type="number" step="1" min="500" max="10000" th:field="*{budget}" class="form-control" id="budget"/>
+                        <div class="text-danger small" th:if="${#fields.hasErrors('budget')}" th:errors="*{budget}"></div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Generate Layout</button>
+                    <a href="/" class="btn btn-secondary">Reset</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5>Notes</h5>
+            <ul>
+                <li>Room dimensions must be between 3 and 15 meters.</li>
+                <li>Budget between $500 and $10,000.</li>
+                <li>The system will generate a single rule-based arrangement and show a simple 2D visualization.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- optional bootstrap js via CDN or webjars -->
+<script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

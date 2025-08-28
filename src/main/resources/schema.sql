@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS furniture;
+
+CREATE TABLE furniture (
+  id IDENTITY PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  width DOUBLE NOT NULL,
+  depth DOUBLE NOT NULL,
+  price INT NOT NULL,
+  category VARCHAR(50) NOT NULL
+);
