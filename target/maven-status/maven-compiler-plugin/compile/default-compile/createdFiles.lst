@@ -1,10 +1,12 @@
 com\interiordesign\model\FurniturePosition.class
 com\interiordesign\config\DatabaseConfig.class
 com\interiordesign\model\RoomLayout.class
+com\interiordesign\controller\GlobalExceptionHandler.class
 com\interiordesign\model\Room.class
 com\interiordesign\service\RuleEngine.class
 com\interiordesign\service\LayoutService.class
+com\interiordesign\config\CorsConfig.class
 com\interiordesign\InteriorDesignApplication.class
+com\interiordesign\controller\LayoutRestController.class
 com\interiordesign\model\Furniture.class
 com\interiordesign\dao\FurnitureDAO.class
-com\interiordesign\controller\HomeController.class

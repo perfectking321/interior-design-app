@@ -4,9 +4,9 @@ D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesig
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\model\RoomLayout.java
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\service\RuleEngine.java
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\service\LayoutService.java
+D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\controller\LayoutRestController.java
+D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\config\CorsConfig.java
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\controller\GlobalExceptionHandler.java
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\dao\FurnitureDAO.java
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\config\DatabaseConfig.java
 D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\model\Furniture.java
-D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\controller\CustomErrorController.java
-D:\projectss\interior design\interior-design-app\src\main\java\com\interiordesign\controller\HomeController.java
